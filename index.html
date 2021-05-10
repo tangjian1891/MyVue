@@ -8,8 +8,21 @@
   </head>
   <body>
     <div id="app">
-      {{message}}
+      <p>{{message}}</p>
+        <p v-text="message"></p>
     </div>
-    <script type="module" src="MyVue.js"></script>
+    <!-- <script type="module" src="./MyVue.js"></script> -->
+    <script type="module">
+      import MyVue from "./MyVue.js";
+      let m = new MyVue({
+        el: "#app",
+        data: {
+          message: "你好啊啊啊啊",
+        },
+        methods: {
+          add() {},
+        },
+      });
+    </script>
   </body>
 </html>
